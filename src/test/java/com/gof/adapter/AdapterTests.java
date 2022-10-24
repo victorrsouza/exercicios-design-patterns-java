@@ -7,21 +7,21 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AdapterTests {
        
-    private BancoDados bd;
+    private BancoDados _sut;
     
     @BeforeEach
     public void setUp() {
         BancoDadosLegado bdLegado = new BancoDadosLegado();
-        bd = new BancoDadosAdapter(bdLegado);
+        _sut = new BancoDadosAdapter(bdLegado);
     }
            
     @Test
     public void deve_inserir_com_sucesso(){        
         //Given
-        this.bd.inserir("victor");
+        _sut.inserir("victor");
         
         //When
-        ArrayList<String> registros = this.bd.recuperar();
+        ArrayList<String> registros = _sut.recuperar();
         
         //Then
         assertEquals(1, registros.size());
@@ -31,11 +31,11 @@ public class AdapterTests {
     @Test
     public void deve_alterar_com_sucesso(){        
         //Given
-        this.bd.inserir("victor");
-        this.bd.alterar("victor", "victor rios");
+        _sut.inserir("victor");
+        _sut.alterar("victor", "victor rios");
         
         //When
-        ArrayList<String> registros = this.bd.recuperar();
+        ArrayList<String> registros = _sut.recuperar();
         
         //Then
         assertEquals(1, registros.size());
@@ -45,14 +45,14 @@ public class AdapterTests {
     @Test
     public void deve_excluir_com_sucesso(){        
         //Given
-        this.bd.inserir("victor");
-        this.bd.inserir("joao");
-        this.bd.inserir("jose");        
+        _sut.inserir("victor");
+        _sut.inserir("joao");
+        _sut.inserir("jose");        
         
-        this.bd.excluir(0);
+        _sut.excluir(0);
         
         //When
-        ArrayList<String> registros = this.bd.recuperar();
+        ArrayList<String> registros = _sut.recuperar();
         
         //Then
         assertEquals(2, registros.size());

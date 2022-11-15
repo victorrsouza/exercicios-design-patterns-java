@@ -2,12 +2,12 @@ package com.gof.builder;
 
 public interface Builder<T> {
     
-    public void reset();
-    public void setAssentos(int quantidade);
-    public void setMotor(Motor motor);
-    public void adicionarComputadorBordo();
-    public void adicionarGPS();
-    public void adicionarFreioDisco();
+    public Builder<T> reset();
+    public Builder<T> setAssentos(int quantidade);
+    public Builder<T> setMotor(Motor motor);
+    public Builder<T> adicionarComputadorBordo();
+    public Builder<T> adicionarGPS();
+    public Builder<T> adicionarFreioDisco();
     public T build();
     
 }

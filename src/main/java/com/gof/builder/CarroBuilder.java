@@ -5,33 +5,39 @@ public class CarroBuilder implements Builder<Carro> {
     private String _descricao;
     
     @Override
-    public void reset() {
+    public CarroBuilder reset() {
         this._descricao = "";
+        return this;
     }
 
     @Override
-    public void setAssentos(int quantidade) {
+    public CarroBuilder setAssentos(int quantidade) {
         this._descricao += " " + quantidade + " lugares";
+        return this;
     }
 
     @Override
-    public void setMotor(Motor motor) {
+    public CarroBuilder setMotor(Motor motor) {
         this._descricao += " " + motor;
+        return this;
     }
 
     @Override
-    public void adicionarComputadorBordo() {
+    public CarroBuilder adicionarComputadorBordo() {
         this._descricao += " com computador de bordo";
+        return this;
     }
 
     @Override
-    public void adicionarGPS() {
+    public CarroBuilder adicionarGPS() {
         this._descricao += " com GPS";
+        return this;
     }
 
     @Override
-    public void adicionarFreioDisco() {
+    public CarroBuilder adicionarFreioDisco() {
         this._descricao += " com Freio a Disco";
+        return this;
     }
 
     @Override

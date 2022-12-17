@@ -2,7 +2,7 @@ package com.gof.composite;
 
 import java.util.ArrayList;
 
-public class Embalagem extends Componente {
+public class Embalagem implements Componente {
     
     private String _nome = "Embalagem";
     private ArrayList<Componente> _componentes = new ArrayList<>();
@@ -24,6 +24,17 @@ public class Embalagem extends Componente {
         
         for (Componente _componente : this._componentes) {
             total += _componente.retornarPreco();
+        }
+        
+        return total;
+    }
+
+    @Override
+    public int quantidadeItens() {
+        int total = 0;
+        
+        for (Componente _componente : this._componentes) {
+            total += _componente.quantidadeItens();
         }
         
         return total;

@@ -24,7 +24,4 @@ public class HeroiDecorator implements Heroi {
     public String atacar() {
         return this.wrappee.atacar();
     }
-
-   
-    
 }

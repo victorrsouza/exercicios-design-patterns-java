@@ -25,6 +25,7 @@ public class Cliente {
         e4.addComponente(e2);
         e4.addComponente(e3);
         
+        System.out.println(">>> Quantidade de itens: " + e4.quantidadeItens());
         System.out.println(">>> Preço do pedido: " + e4.retornarPreco());
         
     }

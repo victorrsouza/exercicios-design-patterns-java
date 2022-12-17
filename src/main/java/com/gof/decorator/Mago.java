@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Cavaleiro implements Heroi {
+public class Mago implements Heroi {
 
     private final String nome;
     private final List<String> habilidades = new ArrayList<>();
@@ -12,13 +12,13 @@ public class Cavaleiro implements Heroi {
     
     private final Random random = new Random();
     
-    public Cavaleiro(String nome, int forca) {
+    public Mago(String nome, int forca) {
         this.nome = nome;
         this.forca = forca;
         
-        this.habilidades.add("Cavalgar");
-        this.habilidades.add("Resistência a arma branca");
-        this.habilidades.add("Fúria");
+        this.habilidades.add("Curar");
+        this.habilidades.add("Resistência a magia");
+        this.habilidades.add("Atordoar");
     }
     
     @Override

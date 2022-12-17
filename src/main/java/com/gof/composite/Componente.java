@@ -1,9 +1,9 @@
 package com.gof.composite;
 
-public abstract class Componente {
+public interface Componente {
     
-    public abstract String nome();
-    public abstract int retornarPreco();
-    
+    public String nome();
+    public int retornarPreco();
+    public int quantidadeItens();
     
 }
